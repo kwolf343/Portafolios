@@ -1,0 +1,85 @@
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.formulario{
+    width: 90%;
+    padding: 2.5%;
+    background-color: rgb(245,246,250);
+    border-radius: 5%;
+}
+.input > input , select, textarea{
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border:2px solid #eee;
+    border-radius: .5rem;
+}
+.input3>input{
+    width: 30%;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border:2px solid #eee;
+    border-radius: .5rem;
+}
+.inputSpace{
+    margin: 0 5%;
+}
+button{
+    width: 100%;
+    background-color: transparent;
+    font-weight: semibold;
+    color:#444;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border:2px solid #eee;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: inset .2rem .2rem 1rem #fff,
+    inset -.2rem -.2rem 1rem #ccc
+}
+textarea{
+    resize: none;
+}
+select{
+    margin: 10px 0;
+}
+.checkboxs{
+    width: 100%;
+    float: left;
+    margin: 10px 0;
+}
+.checkboxs > div{
+    float: left;
+    width: 33.33%;
+}
+.radioButtons>div{
+    width: 50%;
+    float: left;
+    margin-bottom: 15px;
+}
+.textoGrande{
+    float: left;
+    width: 100%;
+    margin: 10px 0;
+}
+.mar{
+    margin: 10px 0;
+}
+.titulo-formulario{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.titulo-formulario>a{
+    text-decoration: none;
+}
+
+@media screen and (min-width:900px){
+    .formulario{
+        width: 55%;
+    }
+}

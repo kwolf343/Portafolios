@@ -1,0 +1,21 @@
+<form #miFormulario="ngForm" (ngSubmit)="guardar(miFormulario)">
+    <div class="formulario">
+        <div class="titulo-formulario">
+            <a href="avance">Actualizar avance</a>
+            <h1>Experiencia laboral</h1>
+            <a></a>
+        </div>
+        <br/><br/>
+        <div>
+            <input type="text" name="empresa" placeholder="Empresa" ngModel>
+        </div>
+        <br/><br/>
+        <div>
+            <input type="text" name="tiempo" placeholder="Tiempo" ngModel>
+        </div>
+        <div class="centrar">
+            <button type="submit">Guardar</button>
+        </div>
+    </div>
+</form>
+

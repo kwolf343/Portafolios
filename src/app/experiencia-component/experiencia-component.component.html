@@ -1,0 +1,19 @@
+<h3>Experiencia laboral</h3>
+
+<div class="contenido" *ngFor="let experiencia of experiencias; let i=index">
+    <p [innerHTML]="experiencia.empresa"></p>
+    <p>{{experiencia.tiempo}}</p>
+</div>
+
+<h3>Referencias personales</h3>
+<p>Ing Arturo Machuca</p>
+<p class="gris">+503 75676523</p>
+<p>Ing Daro Arias Jaco</p>
+<p class="gris">+503 75700534</p>
+<p>Ing Adonay Ama Caravantes</p>
+<p class="gris">+503 64524722</p>
+<h3>Logros personales</h3>
+<p>Representante de la universidad USO en conescapán 2022</p>
+<p class="gris">Presentación de proyecto en conferencia conescapán 2022</p>
+<p>Venta de software a Despensa asunción</p>
+<p class="gris">Creación de software Sistema Automatico para Manejo de Inventario (SAMI) 2022</p>

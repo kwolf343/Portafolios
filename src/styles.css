@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: rgb(109, 112, 126);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(252,252,252);
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor{
+    width: 85%;
+    height: 100%;
+}
+@media screen and (max-width:800px){
+    .contenedor{width: 100%;}
+}

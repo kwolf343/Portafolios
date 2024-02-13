@@ -1,0 +1,37 @@
+[debug] [2024-02-02T01:26:33.913Z] ----------------------------------------------------------------------
+[debug] [2024-02-02T01:26:33.916Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\kevin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-02-02T01:26:33.916Z] CLI Version:   13.1.0
+[debug] [2024-02-02T01:26:33.917Z] Platform:      win32
+[debug] [2024-02-02T01:26:33.917Z] Node Version:  v19.8.1
+[debug] [2024-02-02T01:26:33.917Z] Time:          Thu Feb 01 2024 19:26:33 GMT-0600 (hora estándar central)
+[debug] [2024-02-02T01:26:33.917Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-02T01:26:33.982Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-02T01:26:33.982Z] > authorizing via signed-in user (kammonroy@gmail.com)
+[debug] [2024-02-02T01:26:33.982Z] [iam] checking project portafolios-fe4d9 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2024-02-02T01:26:33.984Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/portafolios-fe4d9:testIamPermissions [none]
+[debug] [2024-02-02T01:26:33.984Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/portafolios-fe4d9:testIamPermissions x-goog-quota-user=projects/portafolios-fe4d9
+[debug] [2024-02-02T01:26:33.985Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portafolios-fe4d9:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2024-02-02T01:26:34.291Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/portafolios-fe4d9:testIamPermissions 200
+[debug] [2024-02-02T01:26:34.292Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portafolios-fe4d9:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2024-02-02T01:26:34.294Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portafolios-fe4d9 [none]
+[debug] [2024-02-02T01:26:34.632Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portafolios-fe4d9 200
+[debug] [2024-02-02T01:26:34.633Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portafolios-fe4d9 {"projectId":"portafolios-fe4d9","projectNumber":"1051783280715","displayName":"Portafolios","name":"projects/portafolios-fe4d9","resources":{"hostingSite":"portafolios-fe4d9","realtimeDatabaseInstance":"portafolios-fe4d9-default-rtdb","storageBucket":"portafolios-fe4d9.appspot.com","locationId":"us-central"},"state":"DELETED","etag":"1_5062fa3b-6d43-4ff6-982a-469e1dcc7d96"}
+[debug] [2024-02-02T01:26:34.633Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portafolios-fe4d9 [none]
+[debug] [2024-02-02T01:26:34.930Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portafolios-fe4d9 200
+[debug] [2024-02-02T01:26:34.930Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portafolios-fe4d9 {"projectId":"portafolios-fe4d9","projectNumber":"1051783280715","displayName":"Portafolios","name":"projects/portafolios-fe4d9","resources":{"hostingSite":"portafolios-fe4d9","realtimeDatabaseInstance":"portafolios-fe4d9-default-rtdb","storageBucket":"portafolios-fe4d9.appspot.com","locationId":"us-central"},"state":"DELETED","etag":"1_5062fa3b-6d43-4ff6-982a-469e1dcc7d96"}
+[info] 
+[info] === Deploying to 'portafolios-fe4d9'...
+[info] 
+[info] i  deploying database, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2024-02-02T01:26:34.936Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/portafolios-fe4d9/locations/-/instances/portafolios-fe4d9-default-rtdb [none]
+[debug] [2024-02-02T01:26:35.325Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/portafolios-fe4d9/locations/-/instances/portafolios-fe4d9-default-rtdb 404
+[debug] [2024-02-02T01:26:35.325Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/portafolios-fe4d9/locations/-/instances/portafolios-fe4d9-default-rtdb {"error":{"code":404,"message":"Project has been deleted.","status":"NOT_FOUND"}}
+[debug] [2024-02-02T01:26:35.326Z] HTTP Error: 404, Project has been deleted.
+[debug] [2024-02-02T01:26:35.466Z] FirebaseError: HTTP Error: 404, Project has been deleted.
+    at responseToError (C:\Users\kevin\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\kevin\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:292:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get instance details for instance: portafolios-fe4d9-default-rtdb. See firebase-debug.log for more details.

@@ -1,0 +1,42 @@
+<div class="trabajo-container">
+    <div class="contenedor-arriba">
+        <div class="contenedor-izquierda">
+            <a href="trabajos"><i class="bi bi-arrow-left-square-fill"></i></a>
+            <h1 class="">{{paginas[indice].titulo}}</h1>
+        </div>
+        <div class="contenedor-derecha">
+            <img [src]="imagenes[paginas[indice].lenguaje-1]">
+        </div>
+    </div>
+    <div class="contenedor-abajo">
+        <div class="contenedor-izquierda contenedor-descripcion">
+            <div class="contenedor-imagenes">
+                <div>
+                    <img [src]="paginas[indice].urlImg1">
+                </div>
+                <div>
+                    <img [src]="paginas[indice].urlImg2">
+                </div>
+                <div>
+                    <img [src]="paginas[indice].urlImg3">
+                </div>
+            </div>
+            <div>
+                <p [innerHTML]="paginas[indice].descripcionLarga"></p>
+                <div>
+                    <button (click)="enlace()">{{ paginas[indice].tipo == 1 ? 'Ver' : 'Descargar' }}</button>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor-derecha">
+            <div>
+                <h3>Tecnologías</h3>
+                <ul>
+                    <li *ngFor="let tecnologia of paginas[indice].tecnologias; let i=index">
+                        <img [src]="imgTec[tecnologia-1]">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

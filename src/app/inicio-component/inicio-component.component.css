@@ -1,0 +1,393 @@
+*{
+  color: #fff;
+}
+:host {
+  --mi-color: rgb(52, 207, 208);
+}
+.Contenedor {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+li{
+  position: absolute;
+  top: 0px;
+}
+li>img{
+  width: 100%;
+}
+.lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+#Verde{
+  position: relative;
+}
+.contenidoSlider{
+  width: 100%;
+  height: 100%;
+}
+li .contenidoSlider{
+  padding: 3%;
+  position: absolute;
+}
+.contenidoSlider>h2{
+  position: relative;
+  z-index: 1;
+  font-size: 200%;
+}
+.contenidoSlider>img{
+  height: min-content;
+  position: absolute;
+}
+#pc{
+  height: 80%;
+  width: min-content;
+  position: relative;
+  left: 50%;
+}
+#celular{
+  height: 30%;
+  right: 23%;
+  bottom: 10%;
+}
+#laptop{
+  height: 35%;
+  left: 42%;
+  bottom: 10%;
+}
+#profesionalismo{
+  height: 70%;
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  z-index: 0;
+}
+button{
+  position: absolute;
+  top: calc(50% - (30px));
+  width: max-content;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border: none;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+button:hover{
+  background: rgba(0, 0, 0, 0.5);
+}
+#btnL{
+  left: 0;
+}
+#btnR{
+  right: 0;
+}
+#btnL>i, #btnR>i{
+  color: rgb(245,246,247);
+  float: right;
+  margin: 0 2px;
+}
+button>i{
+  font-size: 30px;
+  color: white;
+}
+.curriculum{
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.curriculum>div{
+  height: 50%;
+}
+.curriculum>div>img{
+  height: 100%;
+  float: left;
+  border-radius: 30px;
+  padding: 5px;
+  transition: 0.5s;
+}
+.curriculum>div>img:hover{
+  transform: scale(0.95);
+}
+.curriculum>div>img:active{
+  transform: scale(0.9);
+}
+.curriculum>button{
+  left: 0;
+  margin-left: 3%;
+}
+
+.boton{
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(0, 177, 187);
+  border-radius: 15px;
+  box-shadow: 0 5px rgb(43,43,43);
+  display: flex;
+  align-items: center;
+  top: 60%;
+  left: 3%;
+}
+
+.boton:hover {background-color: rgb(0, 159,168);}
+
+.boton:active {
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+.boton>i{
+  margin-left: 15px;
+}
+.panel{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 3%;
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+}
+.botones{
+  display: flex;
+  flex-direction:column;
+}
+.stop{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.stop i{
+  color: var(--mi-color);
+  margin-top: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.stop i:hover{
+  transform: scale(1.2);
+}
+.stop i:active{
+  transform: scale(1);
+}
+.tipoBtn>div{
+  position: relative;
+  margin-top: 10px;
+  font-size: 80%;
+  transition: 0.2s;
+}
+.tipoBtn>div:active{
+  scale: 0.95;
+  filter: drop-shadow(0 0 10px var(--mi-color));
+}
+.botones img{
+  width: 100%;
+  right: 0;
+  cursor: pointer;
+}
+.cont{
+  cursor: pointer;
+}
+.botones span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(190,241,241);
+}
+.pantalla{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pantallaBotom{
+  width: 90%;
+  margin: 0 5%;
+  position: relative;
+  overflow: hidden;
+}
+.pantalla ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: max-content;
+  position: relative;
+}
+.pantalla li{
+  position: relative;
+  float: left;
+  font-size: 2rem;
+  margin: 0 10px;
+}
+.pantalla i{
+  /*color:var(--mi-color);****************************************************************************/
+  cursor: pointer;
+}
+.iconos>li{
+  white-space: nowrap;
+  transition: 0.7s;
+}
+.iconos>li:hover{
+  transform: scale(1.1);
+}
+.iconos>li:active{
+  transform: scale(1);
+}
+.iconos>li i:active{
+  filter: drop-shadow(0 0 5px white);
+}
+.pantalla input{
+  margin: 7px 5%;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 90%;
+  height: 5px;
+  background: var(--mi-color);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--mi-color);
+  border: 2px solid var(--mi-color);
+  border-radius: 50%;
+}
+.contenidoDerecha{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.contenidoDerecha input{
+  background-color: black;
+  width: 100%;
+  height: 1.5rem;
+  border-color: var(--mi-color);
+  margin-bottom: 5px;
+  color: var(--mi-color);
+}
+#logo{
+  width: 100%;
+  height: 1.5rem;
+  margin-bottom: 5px;
+}
+#si, #no{
+  height: 1.5rem;
+  width: 45%;
+}
+#si{
+  margin-right: 10%;
+}
+
+.pantallaTop{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  position: relative;
+}
+.pantallaTop{
+  flex: 1;
+}
+.pantallaTop>div{
+  width: 35%;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.pantallaTop>div:active{
+  scale: 0.95;
+  filter: drop-shadow(0 0 10px var(--mi-color));
+}
+.pantallaTop img{
+  width: 100%;
+}
+.pantallaTop span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.claseAlertas{
+  display: inline-block;
+}
+.pintar{
+  color: lightblue;
+  cursor: pointer;
+  margin-right: 0.3rem;
+}
+#uno{
+  color: var(--mi-color);
+}
+.containerMedio{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  grid-gap: 3.33%;
+  position: relative;
+}
+.containerMedio img{
+  width: 30%;
+}
+.containerMedio>div{
+  text-align: center;
+  background-color: rgb(245,246,247);
+  padding: 5%;
+  margin-bottom: 15px;
+}
+.estiloContainer *{
+  margin-bottom: 15px;
+  color: #666;
+}
+.containerInferior{
+  color: #666;
+  background-color: rgb(245,246,247);
+  margin-bottom: 15px;
+  padding: 15px;
+}
+.containerInferior a{
+  text-decoration: none;
+  font-weight: bold;
+}
+.containerInferior img{
+  width: 42px;
+  height: 42px;
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .curriculum{
+    flex-direction: row;
+  }
+  .curriculum>div{
+    height: 100%;
+    display: flex;
+  }
+  .boton{
+    display: none;
+  }
+  label{
+    display: none;
+  }
+  .claseAlertas{
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .containerMedio{
+    display:block;
+  }
+}

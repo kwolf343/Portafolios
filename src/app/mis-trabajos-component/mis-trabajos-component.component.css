@@ -1,0 +1,50 @@
+.contenedor-trabajos{
+    min-height: calc(100% - (3rem + (39px)));
+}
+h1{
+    margin: 15px 0;
+}
+.trabajos{
+    display: flex;
+    align-items: center;
+}
+.trabajos>div{
+    padding: 0 1rem;
+}
+li{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0.7rem;
+}
+img{
+    max-width: 5rem;
+}
+button{
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(26,46,64);
+    border: solid;
+    border-radius: 15px;
+    box-shadow: 0 5px #999;
+    border: none;
+}
+button:hover {background-color: rgb(37,66, 92)}
+
+button:active {
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+ul>li:nth-child(2n + 1){
+    background-color: rgb(242,248,251)
+}
+ul>li:nth-child(2n + 2){
+    background-color: rgb(234,240,247);
+}

@@ -1,0 +1,56 @@
+*{
+    color: #eee;
+}
+p{
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+h3{
+   margin: 10px 0; 
+}
+.container_inferior>div{
+    margin:2%;
+    width: 98%;
+    float: left;
+}
+.container_inferior>.contenido{
+    margin: 0px;
+    padding: 0px;
+}
+.contenido{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cursoContendido>.contenido{
+    cursor: pointer;
+}
+.cursoContendido>.contenido p:hover{
+    color: gray;
+}
+.contenido>p{
+    margin: 0;
+}
+.gris{
+    color: grey;
+}
+.container_inferior>.Cursos{
+    margin: 0;
+}
+.ocultar{
+    position: relative;
+    font-size: 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+.aparecer{
+    transition: all 0.2s ease;
+    font-size: 80%;
+}
+.container_inferior>.lenguajes, .lenguajes>p{
+    margin: 0;
+}
+.lenguajes>img{
+    width: 5%;
+    margin-right:  1%;
+}

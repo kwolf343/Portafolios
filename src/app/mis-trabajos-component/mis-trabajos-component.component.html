@@ -1,0 +1,16 @@
+<div class="contenedor-trabajos">
+    <h1>Mis trabajos</h1>
+    <ul>
+        <li *ngFor="let pagina of paginas; let i=index">
+            <div class="trabajos">
+                <img [src]="imagenes[pagina.lenguaje-1]">
+                <div>
+                    <h3>{{pagina.titulo}}</h3>
+                    <p>{{pagina.descripcionCorta}}</p>
+                </div>
+            </div>
+            <button [routerLink]="['/trabajo',i]">Ver proyecto</button>
+        </li>
+    </ul>
+</div>
+

@@ -1,0 +1,141 @@
+<div class="Contenedor">
+  <ul class="lista">
+    <li id="Rojo" [ngStyle]="{ 'transform': transform[0],'transition':transition[0]}">
+      <div class="contenidoSlider">
+        <h2>Curriculum Online</h2>
+        <div class="curriculum">
+          <div>
+            <img src="assets/Academico.png" [routerLink]="['/curriculum']">
+            <img src="assets/Habilidades.png" [routerLink]="['/curriculum/habilidades']">
+            <img src="assets/Referencias.png" [routerLink]="['/curriculum/experiencia']">
+          </div>
+          <div>
+            <img src="assets/Tecnologias.png" [routerLink]="['/curriculum/tecnologias']">
+            <img src="assets/Recursos.png" [routerLink]="['/curriculum/recursos']">
+            <img src="assets/Portafolios.png">
+          </div>
+        </div>
+      </div>
+      <button class="boton" [routerLink]="['/curriculum']">Ver curriculum <i class="bi bi-chevron-right"></i></button>
+      <img class="imagenSlider" src="assets/uno.png">
+    </li>
+    <!------------------------------->
+    <li id="Verde" [ngStyle]="{ 'transform': transform[1],'transition':transition[1]}">
+      <div class="contenidoSlider">
+        <h2>Diseño responsive</h2>
+        <img id="pc" src="assets/Pc.png">
+        <img id="laptop" src="assets/Laptop.png">
+        <img id="celular" src="assets/Celular.png">
+      </div>
+      <img class="imagenSlider" src="assets/dos.png">
+    </li>
+    <li id="Azul" [ngStyle]="{ 'transform': transform[2],'transition':transition[2]}">
+      <div class="contenidoSlider">
+        <h2 class="claseAlertas">Alertas</h2>
+        <div class="panel">
+          <div class="botones">
+            <div class="stop">
+              <i title="Detener Slider" class="bi" [ngClass]="sliderActivo ? 'bi-pause-circle' : 'bi-play-circle-fill'" (click)="pausar()"></i>
+            </div>
+            <div class="tipoBtn">
+              <div>
+                <span>TIPO</span><br>
+              </div>
+              <div (click)="Btn(1)">
+                <img src="assets/boton.png">
+                <span class="cont">OK</span>
+              </div>
+              <div (click)="Btn(2)">
+                <img src="assets/boton.png">
+                <span class="cont">SI/NO</span>
+              </div>
+            </div>
+          </div>
+          <div class="pantalla">
+            <div class="pantallaTop">
+              <div (click)="Lanzar()">
+                <img src="assets/boton.png">
+                <span>Lanzar</span>
+              </div>
+            </div>
+            <div class="pantallaBotom">
+              <ul class="iconos" [ngStyle]="{ 'left': -valor+'%'}">
+                <li *ngFor="let clase of listaIconos"><i class="bi {{clase}}" [ngStyle]="{'color': colorLogo}" (click)="setIcono(clase)"></i></li>
+              </ul>
+            </div>
+            <input type="range" id="slider" name="slider" min="0" max="100" [(ngModel)]="valor">
+          </div>
+          <div class="contenidoDerecha">
+            <div>
+              <label>Alerta</label>
+              <input id="titulo" type="text" [(ngModel)]="titulo" placeholder="Titulo">
+              <input id="mensaje" type="text" [(ngModel)]="mensaje" placeholder="Mensaje">
+            </div>
+            <div class="coloresBotones">
+              <label>Personalizar</label>
+              <input id="logo" type="color" (input)="cambioColor($event,1)" value="#34CFD0">
+              <input id="si" type="color" (input)="cambioColor($event,2)" value="#7066E0">
+              <input id="no" type="color" (input)="cambioColor($event,3)" value="#900C3F" [ngStyle]="{'display': cantBtns === 1 ? 'none' : null}">
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="imagenSlider" src="assets/tres.png">
+    </li>
+  </ul>
+  <button id="btnL" (click)="avanzar()"><i class="bi bi-chevron-left"></i></button>
+  <button id="btnR" (click)="retroceder()"><i class="bi bi-chevron-right"></i></button>
+</div>
+<!------------------------------------------------------------------------------------------------>
+
+<i id="uno" class="bi bi-circle-fill pintar" (click)="cambiar(0)" [ngStyle]="{color:pos==0 ? 'rgb(52, 207, 208)' : 'lightblue'}"></i>
+<i id="dos" class="bi bi-circle-fill pintar" (click)="cambiar(1)" [ngStyle]="{color:pos==1 ? 'rgb(52, 207, 208)' : 'lightblue'}"></i>
+<i id="tres"class="bi bi-circle-fill pintar" (click)="cambiar(2)" [ngStyle]="{color:pos==2 ? 'rgb(52, 207, 208)' : 'lightblue'}"></i>
+<div class="containerMedio estiloContainer">
+  <div>
+    <img src="assets/web.png">
+    <h2>Desarrollo web</h2>
+    <p>
+      Desarrollo de aplicaciónes web profesionales con tecnologias de vanguardia, conocimiento en html, 
+      css, javascript, typescrypt, .net, java server faces y angular.
+    </p>
+  </div>
+  <div>
+    <img src="assets/baseDatos.png">
+    <h2>Bases de datos</h2>
+    <p>
+      Conocimiento de bases de datos MySql y con experiencia laboral en SQL Server trabajando para OLS 
+      Data en conjunto con banco de america central desde junio de 2022
+    </p>
+  </div>
+  <div>
+    <img src="assets/software.png">
+    <h2>Desarrollo de software</h2>
+    <p>
+      Servicios profesionales independientes en desarrollo de software con conocimiento en lenguajes como 
+      Java y C# con experiencia en creación de sistema de ventas y facturación para despensa asunción Izalco 
+      en windows forms con C#
+    </p>
+  </div>
+</div>
+<div class="containerInferior estiloContainer">
+  <h2>Sobre esta web</h2>
+  <div>
+    <img src="assets/angular.png">
+    <img src="assets/typescript.png">
+    <img src="assets/html.png">
+    <img src="assets/css.png">
+  </div>
+  <p>
+    Este sitio web ha sido desarrollado utilizando tecnologías de vanguardia, como Angular, TypeScript, HTML y CSS, 
+    con el propósito principal de presentar mi perfil como profesional en el campo de la programación. Más allá de 
+    esta intención inicial, mi enfoque incluye la consecución de metas adicionales, tales como el continuo 
+    perfeccionamiento de mis habilidades técnicas y la voluntad de compartir mi pasión por la programación con otros.
+    <br><br>
+    Creo firmemente en el aprendizaje continuo y estoy comprometido en fortalecer mis habilidades a medida que 
+    evoluciona la tecnología. En esta web, también encontrarás recursos útiles como un componente propio de generación 
+    de alertas, ejemplos de proyectos y contenido que puede ser de tu interes.
+    <br><br>
+    Mira mi <a [routerLink]="['/curriculum']">curriculum</a> para saber mas de mí.
+  </p>
+</div>

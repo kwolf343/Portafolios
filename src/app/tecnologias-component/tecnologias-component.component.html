@@ -1,0 +1,36 @@
+<div>
+    <div class="seccion">
+    <h3>Desarrollo Tecnológico</h3>
+    <p>Web, Movil, Escritorio</p>
+    <ng-container *ngFor="let tec of tecnologias.slice(0, 6)">
+        <img [src]="imagenes[tec.idLenguaje]" (click)="cambiar(tec.idLenguaje)" *ngIf="tec.porcentaje !== 0">
+    </ng-container>
+</div>
+<div class="seccion">
+    <h3>Lenguajes de programación</h3>
+    <p>Javascript, typescript, C#, Java</p>
+    <ng-container *ngFor="let tec of tecnologias.slice(6, 10)">
+        <img [src]="imagenes[tec.idLenguaje]" (click)="cambiar(tec.idLenguaje)" *ngIf="tec.porcentaje !== 0">
+    </ng-container>
+</div>
+<div class="seccion">
+    <h3>Bases de datos</h3>
+    <p>SQL Server, MySql, Firebase</p>
+    <ng-container *ngFor="let tec of tecnologias.slice(10, 13)">
+        <img [src]="imagenes[tec.idLenguaje]" (click)="cambiar(tec.idLenguaje)" *ngIf="tec.porcentaje !== 0">
+    </ng-container>
+</div>
+<h3>Dominio</h3>
+<p>Nivel considerado</p>
+<div class="abajo">
+    <div class="Dominio" [ngSwitch]="opcion">
+        <ng-container *ngFor="let tec of tecnologias.slice(0, 13)">
+          <img *ngSwitchCase="tec.idLenguaje" [src]="imagenes[tec.idLenguaje]">
+        </ng-container>
+      </div>
+    <div class="progress">
+        <div class="progress-bar" [ngStyle]="{ 'background-color': color, 'width':barra}"></div>
+    </div>
+</div>
+
+

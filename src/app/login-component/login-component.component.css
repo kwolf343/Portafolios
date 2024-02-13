@@ -1,0 +1,52 @@
+form{
+    height: calc(100% - (3rem + (39px)));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    text-align: center;
+    margin-bottom: 5%;
+}
+.formulario{
+    width: 55%;
+    padding: 5% 5% 10% 5%;
+    background-color: rgb(245,246,250);
+    border-radius: 5%;
+}
+button{
+    width: 100%;
+    margin: 10% 0 0 0;
+    background-color: transparent;
+    font-weight: semibold;
+    color:#444;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border:2px solid #eee;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: inset .2rem .2rem 1rem #fff,
+    inset -.2rem -.2rem 1rem #ccc
+}
+button:active{
+    box-shadow: inset .2rem .2rem 1rem #ccc,
+    inset -.2rem -.2rem 1rem #ccc
+}
+.centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+  }
+a{
+    text-decoration: none;
+}
+input{
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border:2px solid #eee;
+    border-radius: .5rem;
+    margin: 10px 0;
+}

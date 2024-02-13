@@ -1,0 +1,47 @@
+<div class="container_inferior">
+    <h3>Perfil</h3>
+    <p>{{perfil}}</p>
+    <h3>Formación</h3>
+    <div class="contenido">
+        <p>Bachillerato</p>
+        <p>2014</p>
+    </div>
+    <p class="gris">Fray Bartolomé de las casas, Juayúa</p>
+    <div class="contenido">
+        <p>Título en Ingeniería en Sistemas</p>
+        <p>2022</p>
+    </div>
+    <p class="gris">Universidad de Sonsonate USO</p>
+    <div class="Cursos">
+        <h3>Cursos</h3>
+        <div class="cursoContendido" (click)="cambio(0)">
+            <div class="contenido">
+                <p>Mantenimiento de computadoras</p>
+                <p>abr 2021</p>
+            </div>
+            <p class="gris ocultar" [ngClass]="{'aparecer': cursos[0]}">Curso de mantenimiento preventivo de computadoras que me acredita el des ensamblaje de computadora de escritorio y su limpieza para posteriormente su ensamblaje</p>
+        </div>
+        <div class="cursoContendido" (click)="cambio(1)">
+            <div class="contenido">
+                <p>Curso de desarrollo de páginas web</p>
+                <p>jun 2021</p>
+            </div>
+            <p class="gris ocultar" [ngClass]="{'aparecer': cursos[1]}">Curso para creación de páginas web, html5, css, javascript nivel básico y CEO</p>
+        </div>
+        <div class="cursoContendido" (click)="cambio(2)">
+            <div class="contenido">
+                <p>Curso de Javascrip</p>
+                <p>Mar 2023</p>
+            </div>
+            <p class="gris ocultar" [ngClass]="{'aparecer': cursos[2]}">Curso de programación en javascript para implementación en páginas web</p>
+        </div>
+        <div class="cursoContendido" (click)="cambio(3)">
+            <div class="contenido">
+                <p>Curso de Angular</p>
+                <p>Jun 2023</p>
+            </div>
+            <p class="gris ocultar" [ngClass]="{'aparecer': cursos[3]}">Curso de desarrollo de paginas web con Angular y Firebase</p>
+        </div>
+    </div>
+</div>
+

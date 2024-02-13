@@ -1,0 +1,60 @@
+<form #miFormulario="ngForm" (ngSubmit)="Cargar(miFormulario)">
+    <div class="formulario">
+        <div class="titulo-formulario">
+            <h1>Crear pagina</h1>
+            <a href="avance">Actualizar avance</a>
+        </div>
+        <div class="input mar">
+            <input type="text" name="titulo" placeholder="Titulo" ngModel>
+        </div>
+        <div class="input">
+            <input type="text" name="descripcionC" placeholder="Descripcion corta" ngModel>
+        </div>
+        <div>
+            <select name="lenguaje" #lenguaje="ngModel" ngModel>
+                <option value=1>C#</option>
+                <option value=2>JAVA</option>
+                <option value=3>Angular</option>
+                <option value=4>Android</option>
+                <option value=5>Html</option>
+                <option value=6>React</option>
+                <option value=7>Node js</option>
+              </select>
+        </div>
+        <div class="checkboxs">
+            <div><input type="checkbox" name="lenguajes" value=1 (change)="onCheckboxChange($event)"> HTML</div>
+            <div><input type="checkbox" name="lenguajes" value=2 (change)="onCheckboxChange($event)"> CSS</div>
+            <div><input type="checkbox" name="lenguajes" value=3 (change)="onCheckboxChange($event)"> Javascript</div>
+            <div><input type="checkbox" name="lenguajes" value=4 (change)="onCheckboxChange($event)"> Typescript</div>
+            <div><input type="checkbox" name="lenguajes" value=5 (change)="onCheckboxChange($event)"> SQL Server</div>
+            <div><input type="checkbox" name="lenguajes" value=6 (change)="onCheckboxChange($event)"> My Sql</div>
+            <div><input type="checkbox" name="lenguajes" value=7 (change)="onCheckboxChange($event)"> Firebase</div>
+            <div><input type="checkbox" name="lenguajes" value=8 (change)="onCheckboxChange($event)"> Java</div>
+            <div><input type="checkbox" name="lenguajes" value=9 (change)="onCheckboxChange($event)"> React</div>
+        </div>
+        <div class="input textoGrande">
+            <textarea id="descripcion" rows="4" name="descripcion" placeholder="Descripcion" [(ngModel)]="cuadroDescripcion"></textarea>
+        </div>
+        <div class="radioButtons">
+            <div>
+                <input type="radio" id="web" name="options" value="web" [(ngModel)]="selectedOption">
+                <label for="option1"> Web</label>
+            </div>
+            <div>
+                <input type="radio" id="otro" name="options" value="otro" [(ngModel)]="selectedOption">
+                <label for="option2"> Otro</label>
+            </div>
+        </div>
+        <div class="input3">
+            <input type="text" name="urlImg1" placeholder="url de img 1" ngModel>
+            <input class="inputSpace" type="text" name="urlImg2" placeholder="url de img 2" ngModel>
+            <input type="text" name="urlImg3" placeholder="url de img 3" ngModel>
+        </div>
+        <div class="input">
+            <input class="mar" type="text" name="url1" placeholder="url de pagina" ngModel>
+        </div>
+        <div class="centrar">
+            <br><button type="submit">Cargar</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,25 @@
+*{
+    color: #eee;
+}
+h3{
+    margin: 10px 0;
+ }
+p{
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.gris{
+    color: grey;
+}
+.contenido{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+a{
+    text-decoration: none;
+    color: chocolate;
+}
+a:hover{
+    color: grey;
+}

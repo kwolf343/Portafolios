@@ -1,0 +1,65 @@
+<div class="Principal">
+    <div class="Contenedor">
+        <div class="Left mitad">
+            <div class="contenedorSuperior">
+                <img src="assets/perfil.png" class="fotoPerfil">
+                <div class="info">
+                    <h1>{{nombre}}</h1>
+                    <p>{{carrera}}</p>
+                    <p><a href="mailto:kammonroy@gmail.com" target="_blank">{{correo}}</a></p>
+                    <p><a href="https://wa.me/+50379440351" target="_blank">{{numero}}</a></p>
+                </div>
+            </div>
+            <div class="contenedorInferior">
+                <router-outlet></router-outlet>
+            </div>
+            
+        </div>
+        <div class="Rigth mitad">
+            <div class="seccion" [routerLink]="['/curriculum']">
+                <p class="p1">Perfil Profesional</p>
+                <img src="assets/Academico.png">
+                <p class="p2">Perfil Profesional</p>
+            </div>
+            <div class="seccion" [routerLink]="['/curriculum/habilidades']">
+                <p class="p1">Habilidades</p>
+                <img src="assets/Habilidades.png">
+                <p class="p2">Habilidades</p>
+            </div>
+            <div class="seccion" [routerLink]="['/curriculum/experiencia']">
+                <p class="p1">Experiencia</p>
+                <img src="assets/Referencias.png">
+                <p class="p2">Experiencia</p>
+            </div>
+            <div class="seccion" [routerLink]="['/curriculum/tecnologias']">
+                <p class="p1">Tecnologías</p>
+                <img src="assets/Tecnologias.png">
+                <p class="p2">Tecnologías</p>
+            </div>
+            <div class="seccion" [routerLink]="['/trabajos']">
+                <p class="p1">Mis trabajos</p>
+                <img src="assets/Recursos.png">
+                <p class="p2">Mis trabajos</p>
+            </div>
+            <div class="seccion" [routerLink]="['']">
+                <p class="p1">Portafolio</p>
+                <img src="assets/Portafolios.png">
+                <p class="p2">Portafolio</p>
+            </div>
+        </div>
+    </div>
+    <div id="botonCurriculum" [ngStyle]="{height:bajo ? '50%' : '4%'}">
+        <div class="menuLista" [ngClass]="{'bajar': bajo}">
+            <ul class="lista">
+                <li (click)="redireccionar('/curriculum')"><a>Perfil Profesional</a></li>
+                <li (click)="redireccionar('/curriculum/habilidades')"><a>Habilidades</a></li>
+                <li (click)="redireccionar('/curriculum/experiencia')"><a>Experiencia</a></li>
+                <li (click)="redireccionar('/curriculum/tecnologias')"><a>Tecnologías</a></li>
+                <li (click)="redireccionar('/trabajos')"><a>Mis trabajos</a></li>
+                <li (click)="redireccionar('')"><a>Portafolio</a></li>
+            </ul>
+        </div>
+        <i class="bi" [ngClass]="{'bi-three-dots-vertical': !bajo, 'bi-x': bajo}" (click)="bajar()"></i>
+    </div>
+    
+</div>
