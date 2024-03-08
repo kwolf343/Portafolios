@@ -12,6 +12,7 @@ export class PaginasService{
     setPaginas(misPaginas:pagina[]){
         this.pag=misPaginas;
     }
+    
     agregarPagina(p:pagina){
         const paginas = this.pag;
         this.pag.push(p);

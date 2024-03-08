@@ -11,7 +11,7 @@ import { PaginasService } from '../paginas.service';
 export class TrabajoComponentComponent implements OnInit{
   indice:number;
   paginas:pagina[]=[];
-  imagenes:string[]=['assets/csharp.png','assets/java.png','assets/angular.png','assets/android.png','assets/html.png','assets/react.png','assets/nodeJs.png'];
+  imagenes:string[]=['assets/csharp.png','assets/java.png','assets/angular.png','assets/android.png','assets/html.png','assets/react.png','assets/springBoot.png'];
   imgTec:string[]=['assets/html.png','assets/css.png','assets/javascript.png','assets/typescript.png','assets/sql.png','assets/mysql.png','assets/firebase.png','assets/java.png','assets/react.png'];
   mostrarContenido: boolean = false;
   constructor(private route:ActivatedRoute, private router:Router, private paginasService:PaginasService){}
